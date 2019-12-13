@@ -1,5 +1,5 @@
 #body {
-background-color: black;
+background-color: white;
 }
 #list {
 border-style: solid;
@@ -9,5 +9,5 @@ border-width: 2px;
 color: blue;
 }
 #bad {
-color: white;
+color: black;
 }
