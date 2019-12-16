@@ -15,5 +15,5 @@ const wassPoppin = function () {
 		if (input == "yes" || input == "Yes") {
 			alert("Right! good job.")
 		}
-	} while (input == "no" || input == "No" || input == null || input != "yes" || input !="Yes"|| input !="no" || input !="No");
+	} while (input == "no" || input == "No" || input == null || input !== "yes" || input !=="Yes"|| input !=="no" || input !=="No");
 };
