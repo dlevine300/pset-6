@@ -9,11 +9,11 @@ const wassPoppin = function () {
 		if (input == null) {
 			alert("you didn't say yes. So try again")
 		}
-		if (input == "no" || input == "No") {
+		else if (input == "no" || input == "No") {
 			alert('Wrong, try again.')
 		}
-		if (input == "yes" || input == "Yes") {
-			alert("Right! good job.")
+		else if (input == "yes" || input == "Yes") {
+			alert("Right! good job.") break;
 		}
 	} while (input == "no" || input == "No" || input == null);
 };
