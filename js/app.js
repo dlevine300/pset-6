@@ -16,3 +16,4 @@ const wassPoppin = function () {
 			alert("Right! good job.")
 		}
 	} while (input == "no" || input == "No" || input == null);
+};
