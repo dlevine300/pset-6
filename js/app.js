@@ -5,7 +5,7 @@ window.onload = function() {
 const wassPoppin = function () {
 
 	do {
-		var input = (prompt("Hey elites, chris is gay. Yes or No? "))
+		var input = (prompt("Hey elites, nico is gay. Yes or No? "))
 		if (input == null) {
 			alert("you didn't say yes. So try again")
 		}
