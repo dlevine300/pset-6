@@ -8,6 +8,110 @@
 #head {
   color: black;
 }
-#bad {
+#h3 {
   color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee; /* makes background of list light gray (#eee)*/
+  font-size: 18px;
+  transition: 0.2s;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9; /* Changes the ordered unordered list, so that every odd input on the list is very light gray, "mostly white" (#f9f9f9) */
+}
+
+ul li:hover {
+  background: #ddd;  /* when curser goes over list item, make list item very light gray (#ddd)*/
+}
+
+ul li.checked {
+  background: #888; /* changes background of checked items to dark gray (#888) */
+  color: #fff; /* changes the text color to white (#fff) */
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff; /* changes the boarder color to white (#fff) */
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336; /* changes background of the x to red (#f44336) when mouse hovers over*/
+  color: white;
+}
+
+.header {
+  background-color: #4b4b4b; /* makes heading color grey */
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9; /* changes the background color to very light gray (#d9d9d9) */
+  color: #555; /*change the text color to very dark gray (#555) */
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
 }
