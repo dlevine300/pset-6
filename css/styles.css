@@ -1,16 +1,12 @@
-#body {
+body {
+  margin: 0;
+  min-width: 250px;
   background-color: black;
-}
-#list {
-  border-style: solid;
-  border-width: 2px;
-}
-#head {
-  color: black;
 }
 #h3 {
   color: white;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -24,7 +20,8 @@ ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
-  background: #eee; /* makes background of list light gray (#eee)*/
+  list-style-type: none;
+  background: #fff;
   font-size: 18px;
   transition: 0.2s;
 
@@ -35,23 +32,23 @@ ul li {
 }
 
 ul li:nth-child(odd) {
-  background: #f9f9f9; /* Changes the ordered unordered list, so that every odd input on the list is very light gray, "mostly white" (#f9f9f9) */
+  background: #f7f7f7;
 }
 
 ul li:hover {
-  background: #ddd;  /* when curser goes over list item, make list item very light gray (#ddd)*/
+  background: #eee;
 }
 
-ul li.checked {
-  background: #888; /* changes background of checked items to dark gray (#888) */
-  color: #fff; /* changes the text color to white (#fff) */
+ul li.check {
+  background: #888;
+  color: #fff;
   text-decoration: line-through;
 }
 
-ul li.checked::before {
+ul li.check::before {
   content: '';
   position: absolute;
-  border-color: #fff; /* changes the boarder color to white (#fff) */
+  border-color: #fff;
   border-style: solid;
   border-width: 0 2px 2px 0;
   top: 10px;
@@ -69,12 +66,13 @@ ul li.checked::before {
 }
 
 .close:hover {
-  background-color: #f44336; /* changes background of the x to red (#f44336) when mouse hovers over*/
+  background-color: #f44336;
   color: white;
 }
 
+
 .header {
-  background-color: #4b4b4b; /* makes heading color grey */
+  background-color: #a9a9a9;
   padding: 30px 40px;
   color: white;
   text-align: center;
@@ -87,7 +85,6 @@ ul li.checked::before {
   clear: both;
 }
 
-
 input {
   margin: 0;
   border: none;
@@ -98,12 +95,11 @@ input {
   font-size: 16px;
 }
 
-
 .addBtn {
   padding: 10px;
   width: 25%;
-  background: #d9d9d9; /* changes the background color to very light gray (#d9d9d9) */
-  color: #555; /*change the text color to very dark gray (#555) */
+  background: #d9d9d9;
+  color: #555;
   float: left;
   text-align: center;
   font-size: 16px;
@@ -113,5 +109,5 @@ input {
 }
 
 .addBtn:hover {
-  background-color: #bbb;
+  background-color: #b1b1b1;
 }

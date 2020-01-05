@@ -1,26 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>To do List pset-6</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
-<script type="text/javascript" src="js/app.js"></script>
 </head>
-<body id="body">
-    <div class="header">
-        <center><h1 id="head">pset-6</h1></center>
-    </div>
-    <div id="myDIV" class="header">
-  <h2>My To Do List</h2>
+<body>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">My To Do List</h2>
   <input type="text" id="myInput" placeholder="Title...">
   <span onclick="newElement()" class="addBtn">Add</span>
 </div>
-      <ul id="myUL">
+
+<ul id="myUL">
+  <li class="check">finish pset-6</li>
 </ul>
 
+<script>
+var myNodelist = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('check');
+  }
+}, false);
+
+function newElement() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+</script>
 <center><video width="320" height="240" controls>
   <source src="stuff/movie.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video></center>
 <center><h3 id="h3">^ volume on ^</h3></center>
+<center><h3 id="h3"> any chance this counts for +5 points i kinda need it </h3></center>
 </body>
 </html>
