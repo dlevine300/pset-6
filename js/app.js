@@ -34,20 +34,20 @@ for (i = 0; i < close.length; i++) {
 
 }
 
+const check = function () {
+	const idk = document.getElementsByClassName('SPAN');
 
 
-var list = document.querySelector('ul');
+	do {
+		var input = prompt('Message: ')
+		if (input.length > 50) {
+			alert('Your message is too long. Keep it under 50 characters')
+		}
+	} while (input.length > 50)
 
-list.addEventListener('click', function(ev) {
-
-  if (ev.target.tagName === 'LI') {
-
-    ev.target.classList.toggle('checked');
-
-  }
-
-}, false);
-
+	ctx.font = '48px sans-serif';
+	ctx.strokeText(input, 30, 70, 994);
+};
 
 
 function newElement() {
