@@ -3,10 +3,18 @@ body {
   min-width: 250px;
   background-color: black;
 }
+#h1 {
+  color: black;
+  font-family: arial;
+}
+#h2 {
+  color: black;
+  font-family: arial;
+}
 #h3 {
   color: white;
+  font-family: arial;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -39,10 +47,18 @@ ul li:hover {
   background: #eee;
 }
 
-ul li.check {
-  background: #888;
+.check {
+  background: #696969
   color: #fff;
   text-decoration: line-through;
+}
+.allTasks {
+  background: #696969
+  color: #fff;
+  text-decoration: line-through;
+}
+.check:hover{
+  background: #ff0000;
 }
 
 ul li.check::before {
@@ -58,16 +74,14 @@ ul li.check::before {
   width: 7px;
 }
 
-.close {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 12px 16px 12px 16px;
+.delBtn {
+  background: #696969
+  color: #fff;
+  font-family: arial;
 }
 
-.close:hover {
-  background-color: #f44336;
-  color: white;
+.delBtn:hover {
+  background: #ff0000;
 }
 
 
@@ -85,17 +99,21 @@ ul li.check::before {
   clear: both;
 }
 
-input {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 50%;
+#taskInput {
   padding: 10px;
+  width: 50%;
+  background: #d9d9d9;
+  color: #555;
   float: left;
+  text-align: center;
   font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  font-family: arial;
 }
 
-.addBtn {
+#taskPriority {
   padding: 10px;
   width: 50%;
   background: #d9d9d9;
@@ -107,7 +125,12 @@ input {
   transition: 0.3s;
   border-radius: 0;
 }
-
-.addBtn:hover {
+#addTaskButton {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-family: arial;
+}
+#addTaskButton:hover {
   background-color: #b1b1b1;
 }
