@@ -15,6 +15,11 @@ body {
   color: white;
   font-family: arial;
 }
+#h32 {
+  font-family: arial;
+  font-size: 16px;
+  color: black;
+}
 * {
   box-sizing: border-box;
 }
